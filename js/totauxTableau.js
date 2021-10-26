@@ -14,7 +14,7 @@ function totauxMasses() {
     }
 
     //Affichage Total
-    document.getElementById('totalMasse').innerHTML = totalMasse;
+    document.getElementById('totalMasse').innerHTML = totalMasse.toFixed(3);
 }
 
 function totauxMoments() {
@@ -28,7 +28,7 @@ function totauxMoments() {
     }
 
     //Affichage Total
-    document.getElementById('totalMoment').innerHTML = totalMoments;
+    document.getElementById('totalMoment').innerHTML = totalMoments.toFixed(3);
 }
 
 function totalLevier() {
@@ -40,5 +40,5 @@ function totalLevier() {
     const displayLevier = calculLevier ? calculLevier : 0;
 
 
-    document.getElementById('totalLevier').innerHTML = displayLevier;
+    document.getElementById('totalLevier').innerHTML = displayLevier.toFixed(3);
 }

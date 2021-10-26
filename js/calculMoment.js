@@ -35,6 +35,6 @@ function calculMoment(nameItem) {
 
     const levier = parseFloat(document.getElementById('levierMasse' + nameItem).textContent);
 
-    document.getElementById('resultMoment' + nameItem).innerHTML = masse * levier;
+    document.getElementById('resultMoment' + nameItem).innerHTML = (masse * levier).toFixed(3);
 
 }
