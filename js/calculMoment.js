@@ -7,18 +7,34 @@ const inputMasseBagages = document.getElementById('masseBagages');
 
 //Ajout des événements 
 inputMasseAppareil.addEventListener('input', function () {
-    calculMoment('Appareil');
+    checkVerif('Appareil');
 });
 inputMassePilote.addEventListener('input', function () {
-    calculMoment('Pilote')
+    checkVerif('Pilote');
 });
 inputMassePassager.addEventListener('input', function () {
-    calculMoment('Passager');
+    checkVerif('Passager');
 });
 inputMasseCarburant.addEventListener('input', function () {
-    calculMoment('Carburant');
+    checkVerif('Carburant');
 });
 inputMasseBagages.addEventListener('input', function () {
-    calculMoment('Bagages');
+    checkVerif('Bagages');
 });
 
+function checkVerif(item) {
+    calculMoment(item);
+    totauxTableaux();
+    verifMasse();
+    verifLevier();
+}
+
+//Calcul Moment 
+function calculMoment(nameItem) {
+    const masse = document.getElementById('masse' + nameItem).value;
+
+    const levier = parseFloat(document.getElementById('levierMasse' + nameItem).textContent);
+
+    document.getElementById('resultMoment' + nameItem).innerHTML = masse * levier;
+
+}

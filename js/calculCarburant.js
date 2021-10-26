@@ -5,6 +5,10 @@ const densiteCarburant = document.getElementById('densiteCarburant');
 //Ajout des événements
 litreCaburant.addEventListener('input', function () {
     calculMasseCarburant(litreCaburant.value, densiteCarburant.value);
+    calculMoment('Carburant');
+    totauxTableaux();
+    verifLevier();
+    verifMasse();
 });
 
 densiteCarburant.addEventListener('input', function () {
