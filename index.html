@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Masse et centrage ULM</title>
+</head>
+
+<body>
+    <h1> Masse et centrage ULM</h1>
+    <p>Les Masses sont à indiquer en KG</p>
+
+    <section>
+        <h2> Calcul des bras de levier</h2>
+        <div class="saisiePreInfo">
+            <div class="saisieInfo">
+                <label for="levierAppareil">Appareil</label>
+                <input type="number" name="levierAppareil" id="levierAppareil" class="form-control col-5">
+            </div>
+            <div class="saisieInfo">
+                <label for="levierPilote">Pilote et Passager</label>
+                <input type="number" name="levierPilote" id="levierPilote" class="form-control col-5">
+            </div>
+            <div class="saisieInfo">
+                <label for="levierCarburant">Carburant</label>
+                <input type="number" name="levierCarburant" id="levierCarburant" class="form-control col-5">
+            </div>
+
+            <div class="saisieInfo">
+                <label for="levierBagages">Bagages</label>
+                <input type="number" name="levierBagages" id="levierBagages" class="form-control col-5">
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2> Calcul Carburant </h2>
+        <div class="saisiePreInfo">
+            <div class="saisieInfo">
+                <label for="litreCarburant"> Litres Carburant</label>
+                <input type="number" name="litreCarburant" id="litreCarburant" class="form-control col-5">
+            </div>
+            <div class="saisieInfo">
+                <label for="densiteCarburant"> Densité Carburant</label>
+                <input type="number" name="densiteCarburant" id="densiteCarburant" class="form-control col-5">
+            </div>
+
+            <p> Masse de l'essence : <span id="resultMasseCarburant">0</span> KG </p>
+        </div>
+
+    </section>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> Item</th>
+                <th scope="col"> Masse (M)</th>
+                <th scope="col"> Bras de levier (L)</th>
+                <th scope="col"> Moment (M x L)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"> Appareil à vide</th>
+                <td><input type="number" class="form-control" name="masseAppareil" id="masseAppareil"></td>
+                <td> <span id="levierMasseAppareil"> 0.282</span> m</td>
+                <td> <span id="resultMomentAppareil">0</span></td>
+            </tr>
+
+            <tr>
+                <th scope="row"> Pilote </th>
+                <td><input type="number" class="form-control" name="massePilote" id="massePilote"> </td>
+                <td> <span id="levierMassePilote"> 0.52 </span> m </td>
+                <td> <span id="resultMomentPilote">0</span></td>
+            </tr>
+
+            <tr>
+                <th scope="row"> Passager </th>
+                <td>
+                    <input type="number" class="form-control" name="massePassager" id="massePassager">
+                </td>
+                <td> <span id="levierMassePassager">0.52</span> m</td>
+                <td><span id="resultMomentPassager">0</span></td>
+            </tr>
+
+            <tr>
+                <th scope="row"> Carburant </th>
+                <td>
+                    <input type="number" class="form-control" name="masseCarburant" id="masseCarburant">
+                </td>
+                <td> <span id="levierMasseCarburant">0.3</span> m</td>
+                <td> <span id="resultMomentCarburant">0</span></td>
+            </tr>
+
+            <tr>
+                <th scope="row"> Bagages</th>
+                <td>
+                    <input type="number" name="masseBagages" id="masseBagages" class="form-control">
+                </td>
+                <td> <span id="levierMasseBagages">1.09</span> m</td>
+                <td> <span id="resultMomentBagages">0</span></td>
+            </tr>
+
+            <tr>
+                <th scope="row">Totaux</th>
+                <td> <span id="TotalMasse">0</span></td>
+                <td> <span id="TotalLevier">0</span></td>
+                <td> <span id="TotalMoment">0</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="js/brasLevier.js"></script>
+    <script src="js/calculCarburant.js"></script>
+    <script src="js/calcul.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

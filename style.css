@@ -1,0 +1,28 @@
+h1{text-align: center;}
+
+.saisiePreInfo{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2%;
+}
+
+.saisieInfo{
+    display: flex;
+}
+
+.saisieInfo label{
+    padding-right: 5% ;
+}
+
+@media (max-width: 414px){
+    .saisiePreInfo{
+        flex-direction: column;
+    }
+
+    .saisieInfo{
+        justify-content: space-between;
+    }
+    .saisieInfo label{
+        padding: 0;
+    }
+}
